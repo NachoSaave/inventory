@@ -18,13 +18,13 @@ public class ServiceInventory {
                 .orElseThrow();
     }
 
-    public void discountStock(Long motoId, Integer quantity) {
+    public void DescontarStock(Long motoId, Integer stock) {
 
         Inventory inventory = repository.findByMotoId(motoId)
                 .orElseThrow();
 
         inventory.setStock(
-                inventory.getStock() - quantity
+                inventory.getStock() - stock
         );
 
         repository.save(inventory);
