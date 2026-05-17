@@ -8,19 +8,16 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-public class inventory {
 @Entity
 @Table(name = "inventory")
 @Getter
 @Setter
-public class Inventory {
+public class inventory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private Long motoId;
-
+    
+    private Long idMoto;
     private Integer stock;
-}
 }
