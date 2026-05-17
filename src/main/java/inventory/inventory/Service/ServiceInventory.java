@@ -1,5 +1,7 @@
 package inventory.inventory.Service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import inventory.inventory.Model.inventory.Inventory;
@@ -26,5 +28,19 @@ public class ServiceInventory {
         );
 
         repository.save(inventory);
+    }
+
+    public Inventory guardar(
+            Inventory inventario){
+
+        return repository.save(
+                inventario
+        );
+    }
+
+    // LISTAR TODOS
+    public List<Inventory> listar(){
+
+        return repository.findAll();
     }
 }
